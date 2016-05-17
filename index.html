@@ -1,0 +1,18 @@
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+
+<!-- CodeMirror -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.2.0/codemirror.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.2.0/codemirror.css"/>
+
+<!-- Firepad -->
+<link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.3.0/firepad.css" />
+<script src="https://cdn.firebase.com/libs/firepad/1.3.0/firepad.min.js"></script>
+
+<div id="firepad"></div>
+<script>
+  var firepadRef = new Firebase('<crackling-inferno-3463.firebaseapp.com>');
+  var codeMirror = CodeMirror(document.getElementById('firepad'), { lineWrapping: true });
+  var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror,
+      { richTextShortcuts: true, richTextToolbar: true, defaultText: 'Hello, World!' });
+</script>
